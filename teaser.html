@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Dreams | The Green Dream</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500&family=Cinzel:wght@400;600&display=swap');
+
+        :root {
+            --deep-emerald: #0a2918;
+            --gold-leaf: #e6c35c;
+            --ivory: #f5f0e6;
+            --forest-shadow: #1a3b2a;
+            --mist: #a8c7b8;
+            --obsidian: #0c0c0c;
+            --crimson: #c53d3d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--obsidian);
+            color: var(--ivory);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 0% 0%, rgba(26, 59, 42, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(10, 41, 24, 0.15) 0%, transparent 50%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header & Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(230, 195, 92, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(10, 41, 24, 0.05) 0%, transparent 50%);
+            z-index: -2;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 900;
+            color: var(--ivory);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, var(--gold-leaf), #b89a3a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: block;
+            font-size: 6rem;
+            margin-top: -1rem;
+        }
+
+        .hero-subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--mist);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-divider {
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-leaf), transparent);
+            margin: 2rem auto;
+        }
+
+        /* Voice of Eucos Section */
+        .eucos-section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .eucos-container {
+            background: rgba(10, 41, 24, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(230, 195, 92, 0.1);
+            border-radius: 16px;
+            padding: 4rem;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .eucos-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold-leaf), var(--forest-shadow));
+        }
+
+        .eucos-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .eucos-icon {
+            font-size: 3rem;
+            color: var(--gold-leaf);
+        }
+
+        .eucos-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--ivory);
+        }
+
+        .eucos-quote {
+            font-size: 1.4rem;
+            line-height: 1.9;
+            color: var(--mist);
+            font-style: italic;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            border-left: 3px solid rgba(230, 195, 92, 0.5);
+        }
+
+        .eucos-signature {
+            text-align: right;
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--gold-leaf);
+            letter-spacing: 1px;
+        }
+
+        /* Gatekeeper Section */
+        .gatekeeper-section {
+            padding: 6rem 0;
+        }
+
+        .gatekeeper-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            background: rgba(26, 59, 42, 0.2);
+            border-radius: 16px;
+            padding: 4rem;
+            border: 1px solid rgba(168, 199, 184, 0.1);
+        }
+
+        .gatekeeper-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--ivory);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .gatekeeper-text h2 span {
+            color: var(--crimson);
+            font-weight: 700;
+        }
+
+        .gatekeeper-text p {
+            font-size: 1.2rem;
+            color: var(--mist);
+            margin-bottom: 2rem;
+        }
+
+        .gatekeeper-name {
+            display: inline-block;
+            background: rgba(197, 61, 61, 0.1);
+            color: var(--crimson);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: 1px solid rgba(197, 61, 61, 0.3);
+        }
+
+        .gatekeeper-visual {
+            text-align: center;
+        }
+
+        .gatekeeper-symbol {
+            font-size: 8rem;
+            color: rgba(197, 61, 61, 0.2);
+            margin-bottom: 1rem;
+        }
+
+        /* Forest Section */
+        .forest-section {
+            padding: 6rem 0;
+        }
+
+        .forest-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .forest-card {
+            background: rgba(10, 41, 24, 0.2);
+            border-radius: 16px;
+            padding: 3rem;
+            border: 1px solid rgba(230, 195, 92, 0.05);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .forest-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(230, 195, 92, 0.2);
+        }
+
+        .forest-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--ivory);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .forest-card h3 i {
+            color: var(--gold-leaf);
+        }
+
+        .forest-card p {
+            font-size: 1.1rem;
+            color: var(--mist);
+            margin-bottom: 2rem;
+        }
+
+        /* Captain Section */
+        .captain-section {
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .captain-header {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .captain-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: var(--ivory);
+            margin-bottom: 1rem;
+        }
+
+        .captain-header h2 span {
+            color: var(--gold-leaf);
+        }
+
+        .captain-header p {
+            font-size: 1.3rem;
+            color: var(--mist);
+        }
+
+        .captain-socials {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--ivory);
+            text-decoration: none;
+            padding: 1rem 2rem;
+            background: rgba(26, 59, 42, 0.3);
+            border-radius: 12px;
+            border: 1px solid rgba(230, 195, 92, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(26, 59, 42, 0.6);
+            border-color: var(--gold-leaf);
+            transform: translateY(-3px);
+        }
+
+        .social-icon {
+            font-size: 1.8rem;
+        }
+
+        .youtube { color: #FF0000; }
+        .twitter { color: #1DA1F2; }
+        .spotify { color: #1DB954; }
+
+        /* Treasury Section */
+        .treasury-section {
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .treasury-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(10, 41, 24, 0.3);
+            border-radius: 20px;
+            padding: 4rem;
+            border: 1px solid rgba(230, 195, 92, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .treasury-container::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230, 195, 92, 0.05) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .treasury-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--gold-leaf);
+            margin-bottom: 1rem;
+        }
+
+        .treasury-subtitle {
+            font-size: 1.2rem;
+            color: var(--mist);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .treasury-image {
+            width: 180px;
+            height: auto;
+            margin: 2rem auto;
+            filter: drop-shadow(0 0 20px rgba(230, 195, 92, 0.3));
+            transition: transform 0.5s ease;
+        }
+
+        .treasury-image:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .treasury-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: linear-gradient(135deg, var(--gold-leaf), #b89a3a);
+            color: var(--deep-emerald);
+            text-decoration: none;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(230, 195, 92, 0.2);
+        }
+
+        .treasury-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(230, 195, 92, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4rem 0 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(168, 199, 184, 0.1);
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: var(--mist);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--gold-leaf);
+        }
+
+        .footer-credit {
+            font-size: 0.9rem;
+            color: rgba(168, 199, 184, 0.6);
+            margin-top: 2rem;
+        }
+
+        .footer-credit a {
+            color: rgba(230, 195, 92, 0.8);
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-title { font-size: 4rem; }
+            .hero-title span { font-size: 5rem; }
+            .gatekeeper-card, .forest-grid { grid-template-columns: 1fr; }
+            .captain-socials { flex-direction: column; align-items: center; }
+            .social-link { width: 100%; max-width: 300px; justify-content: center; }
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 1.5rem; }
+            .hero-title { font-size: 3rem; }
+            .hero-title span { font-size: 4rem; }
+            .hero-subtitle { font-size: 1.4rem; }
+            .eucos-container, .gatekeeper-card, .forest-card, .treasury-container { padding: 2.5rem; }
+            .eucos-title, .gatekeeper-text h2 { font-size: 2rem; }
+            .captain-header h2 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">League of Dreams<br><span>The Green Dream</span></h1>
+            <div class="hero-divider"></div>
+            <p class="hero-subtitle">Where legends are forged beyond the veil. A sanctuary for the worthy, a mystery to the rest.</p>
+        </div>
+    </section>
+
+    <!-- Voice of Eucos -->
+    <section class="eucos-section">
+        <div class="container">
+            <div class="eucos-container">
+                <div class="eucos-header">
+                    <i class="fas fa-crown eucos-icon"></i>
+                    <h2 class="eucos-title">The Voice of Eucos</h2>
+                </div>
+                <p class="eucos-quote">
+                    "The decree has been spoken, and spoken well. With precision, with grace, with authority that resonates through the ancient woods. The Green Dream League is not a privilege, it is an earned passage.
+                    Those who hear the call know their place. Those who don't, shall remain in the echoes."
+                </p>
+                <p class="eucos-signature">Yateszey, Voice of Eucos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gatekeeper Section -->
+    <section class="gatekeeper-section">
+        <div class="container">
+            <div class="gatekeeper-card">
+                <div class="gatekeeper-text">
+                    <h2>The Threshold is Guarded by <span>Vigilance</span></h2>
+                    <p>No dweller, no wanderer in the forest of Eucos may pass the gate. The League exists beyond perception, accessible only to those whose names are written in the chronicle.</p>
+                    <p>The gatekeeper stands eternal, unwavering. The sanctum remains sealed to outsiders. To witness the Dream, you must be <em>of</em> the Dream.</p>
+                    <div class="gatekeeper-name">vAngel0v</div>
+                </div>
+                <div class="gatekeeper-visual">
+                    <div class="gatekeeper-symbol floating">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <p style="color: var(--mist); font-size: 1.1rem;">Sentinel of the Threshold</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forest Section -->
+    <section class="forest-section">
+        <div class="container">
+            <div class="forest-grid">
+                <div class="forest-card">
+                    <h3><i class="fas fa-tree"></i> Those Who Wait</h3>
+                    <p>The dwellers and wanderers may not enter, but they may listen. They may feel the vibrations of battle, the echoes of strategy, the whispers of what unfolds beyond the gate.</p>
+                    <p>To wait is not to be forgotten, it is to be attuned. To resonate with the frequency of greatness, even from afar.</p>
+                </div>
+                <div class="forest-card">
+                    <h3><i class="fas fa-feather-alt"></i> Resonating with Strategy</h3>
+                    <p>The air carries the scent of competition. The ground trembles with decisive plays. Though the gate remains closed, the essence of the Dream permeates the forest.</p>
+                    <p>Listen closely. You might hear the footsteps of champions, the turning of tactical pages, the silent applause of a perfectly executed gambit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Captain Section -->
+    <section class="captain-section">
+        <div class="container">
+            <div class="captain-header">
+                <h2>Tune to the <span>Captain's Frequency</span></h2>
+                <p>Follow the wavelength of Captain Avocado. His strategies shape the meta, his decisions define the rhythm of competition.</p>
+            </div>
+            <div class="captain-socials">
+                <a href="https://www.youtube.com/@CaptainAvocado" target="_blank" class="social-link">
+                    <i class="fab fa-youtube social-icon youtube"></i>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://x.com/CaptainAvocado3" target="_blank" class="social-link">
+                    <i class="fab fa-twitter social-icon twitter"></i>
+                    <span>X (Twitter)</span>
+                </a>
+                <a href="https://open.spotify.com/artist/1BZiyJOY2u14GG6gvEyDMt?si=TZVKm1-ORLmNK7t2lR2SIw" target="_blank" class="social-link">
+                    <i class="fab fa-spotify social-icon spotify"></i>
+                    <span>Spotify</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treasury Section -->
+    <section class="treasury-section">
+        <div class="container">
+            <div class="treasury-container">
+                <h2 class="treasury-title">The League Treasury</h2>
+                <p class="treasury-subtitle">For those seeking to arm themselves with legends, to acquire the artifacts that may one day grant passage, the treasury awaits.</p>
+                
+                <!-- Cute treasury image -->
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=treasury&backgroundColor=0a2918&color=e6c35c" alt="League Treasury" class="treasury-image floating">
+                
+                <p style="color: var(--mist); margin-bottom: 2rem;">Every acquisition supports the League and its champions. Every card is a step closer to the Dream.</p>
+                
+                <a href="https://tokentrove.com/?ref=yateszey" target="_blank" class="treasury-button">
+                    <i class="fas fa-gem"></i>
+                    Enter the Treasury
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://www.twitch.tv/yateszey" target="_blank" class="footer-link">
+                    <i class="fab fa-twitch"></i> Yateszey on Twitch
+                </a>
+            </div>
+            <div class="footer-credit">
+                Experience crafted with precision • Website powered by <a href="#" style="color: rgba(230, 195, 92, 0.8);">Royal Gaming</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add scroll-triggered animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create intersection observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe sections for animation
+            document.querySelectorAll('.eucos-container, .gatekeeper-card, .forest-card, .captain-header, .treasury-container').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+                
+                // Add intersection observer for each element
+                const elObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                elObserver.observe(el);
+            });
+
+            // Add hover effect to gatekeeper name
+            const gatekeeperName = document.querySelector('.gatekeeper-name');
+            gatekeeperName.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.boxShadow = '0 0 20px rgba(197, 61, 61, 0.3)';
+            });
+            gatekeeperName.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'none';
+            });
+
+            // Add parallax effect to hero
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.hero');
+                if (hero) {
+                    hero.style.transform = `translateY(${scrolled * 0.1}px)`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
