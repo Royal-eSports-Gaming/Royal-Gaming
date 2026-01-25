@@ -1,0 +1,188 @@
+:root.theme-core {
+    /* Royal Navy + Gold */
+    --color-bg: #0A1626;
+    --color-surface: #111638;
+    --color-accent: #C49808;
+    --color-accent-glow: #FFD700;
+    --color-text: #E0E0E0;
+    --color-muted: #8A8FAF;
+    --color-blue-glow: #4872E8;
+}
+
+/* Particles canvas */
+#particles {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    color: var(--color-text);
+    background: rgba(10, 22, 37, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    padding: 1rem 0;
+    color: #ffd700; 
+}
+.header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; align-items: center; gap: 0.5rem; color: var(--color-accent); text-decoration: none; font-weight: 700; font-size: 1.25rem; }
+.nav { display: flex; gap: 2rem; color: var(--color-text); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; color: #ffd700; }
+.nav a { color: var(--color-text); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; color: #ffd700; }
+.nav a:hover { opacity: 1; }
+
+/* Golden text treatment */
+h1, h2, h3, h4 {
+    color: var(--color-text);
+}
+
+/* Accent headings */
+.section-title {
+    color: var(--color-accent);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-accent);
+    opacity: 0.6;
+}
+
+/* Golden accent text */
+.gold-text {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* Pillar / realm / web3 titles in gold */
+.pillar-card h3,
+.realm-card h3,
+.web3-card h3 {
+    color: var(--color-accent);
+}
+
+/* Button text tweaks */
+.cta-button.primary {
+    color: var(--color-bg);
+    font-weight: 600;
+}
+
+.cta-button.secondary {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+
+/* Hero */
+.hero { 
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    text-align: center; 
+    padding-top: 8rem;
+}
+.hero-title span { display: block; }
+.hero-subtitle { 
+    font-size: 1.25rem; 
+    max-width: 600px; 
+    margin: 2rem auto 1rem; 
+    opacity: 0.9;
+}
+.hero-mantra { 
+    font-size: 1.125rem; 
+    font-weight: 600; 
+    color: var(--color-accent);
+    margin-bottom: 3rem;
+}
+.hero-ctas { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+.hero-badges { 
+    position: absolute; 
+    bottom: 2rem; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex; 
+    gap: 1rem; 
+    opacity: 0.6;
+}
+.badge { 
+    background: var(--color-surface); 
+    padding: 0.5rem 1rem; 
+    border-radius: 20px; 
+    font-size: 0.875rem;
+}
+
+/* Section styles */
+.section { position: relative; }
+.section-title { text-align: center; color: var(--color-accent); position: relative; }
+.section-title::after { 
+    content: ''; 
+    position: absolute; 
+    bottom: -0.5rem; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 60px; 
+    height: 2px; 
+    background: var(--color-accent);
+}
+
+/* Cards */
+.pillars-grid, .realms-grid, .web3-grid { 
+    display: grid; 
+    gap: 2rem; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    margin-top: 3rem;
+}
+.pillar-card, .web3-card { 
+    background: var(--color-surface); 
+    padding: 2.5rem 2rem; 
+    border-radius: 20px; 
+    border: 1px solid rgba(196, 152, 8, 0.1); 
+    transition: all 0.3s ease;
+    text-align: center;
+}
+.pillar-card:hover { 
+    transform: translateY(-8px); 
+    border-color: var(--color-accent); 
+    box-shadow: 0 20px 40px rgba(196, 152, 8, 0.15);
+}
+.pillar-icon { 
+    font-size: 3rem; 
+    margin-bottom: 1rem; 
+    display: block;
+}
+
+/* Footer */
+.footer { 
+    background: var(--color-surface); 
+    padding: 3rem 0 1.5rem; 
+    text-align: center; 
+    border-top: 1px solid rgba(196, 152, 8, 0.1);
+}
+.footer-content { display: flex; flex-direction: column; gap: 1rem; align-items: center; }
+.footer-links { display: flex; gap: 2rem; }
+.footer-links a { color: var(--color-muted); text-decoration: none; }
+
+/* Theme toggle */
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--color-surface);
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    font-size: 1.25rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}

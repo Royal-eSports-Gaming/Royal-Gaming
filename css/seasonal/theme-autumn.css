@@ -1,0 +1,9 @@
+:root.theme-autumn {
+    --color-bg: #100C18;
+    --color-surface: #1E162B;
+    --color-accent: #C45B2A;        /* Deep burnt orange */
+    --color-accent-glow: #E87C4A;
+    --color-text: #F0E6D2;
+    --color-muted: #B8A88A;
+    --color-blue-glow: #5D7DBD;
+}

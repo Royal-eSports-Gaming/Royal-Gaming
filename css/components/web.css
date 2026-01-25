@@ -1,0 +1,68 @@
+.web3 {
+    background: var(--color-surface);
+    position: relative;
+}
+
+.web3::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at top left, rgba(72, 114, 232, 0.1) 0%, transparent 60%);
+    z-index: -1;
+}
+
+.web3-lead {
+    max-width: 700px;
+    margin: 1.5rem auto 3rem;
+    color: var(--color-text);
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+.web3-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 3rem;
+}
+
+.web3-card {
+    background: rgba(17, 22, 56, 0.8);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(196, 152, 8, 0.15);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.web3-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-accent);
+    box-shadow: 0 15px 30px rgba(196, 152, 8, 0.15);
+}
+
+.web3-card h3 {
+    color: var(--color-accent);
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+}
+
+.web3-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.web3-card li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    position: relative;
+    padding-left: 1.25rem;
+}
+
+.web3-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}

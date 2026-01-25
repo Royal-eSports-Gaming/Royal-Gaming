@@ -1,0 +1,9 @@
+:root.theme-spring {
+    --color-bg: #0D1A26;
+    --color-surface: #142238;
+    --color-accent: #A3C159;        /* Soft green */
+    --color-accent-glow: #C2E080;
+    --color-text: #E8F0E0;
+    --color-muted: #A8B8A0;
+    --color-blue-glow: #6BAED6;
+}

@@ -1,0 +1,54 @@
+.pillars {
+    background: var(--color-surface);
+    position: relative;
+    overflow: hidden;
+}
+
+.pillars::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at top right, rgba(72, 114, 232, 0.1) 0%, transparent 60%);
+    z-index: -1;
+}
+
+.pillars-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 3rem;
+}
+
+.pillar-card {
+    background: rgba(17, 22, 56, 0.8);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(196, 152, 8, 0.15);
+    transition: all 0.3s ease;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.pillar-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-accent);
+    box-shadow: 0 20px 40px rgba(196, 152, 8, 0.15);
+}
+
+.pillar-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    color: var(--color-accent);
+}
+
+.pillar-card h3 {
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.pillar-card p {
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}

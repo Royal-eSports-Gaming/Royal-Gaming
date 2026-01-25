@@ -1,0 +1,107 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 8rem;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center, rgba(72, 114, 232, 0.15) 0%, rgba(13, 34, 117, 0.4) 70%);
+    z-index: -1;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-text);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-title span:nth-child(2) {
+    color: var(--color-accent);
+    position: relative;
+    display: inline-block;
+}
+
+.hero-title span:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--color-accent);
+    opacity: 0.6;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 2rem auto 1rem;
+    opacity: 0.9;
+    color: var(--color-text);
+}
+
+.hero-mantra {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: 3rem;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-badges {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    opacity: 0.6;
+}
+
+.badge {
+    background: var(--color-surface);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: var(--color-text);
+    border: 1px solid rgba(196, 152, 8, 0.15);
+}
+
+/* Golden hero title */
+.hero-title span:nth-child(2) {
+    color: var(--color-accent);
+    position: relative;
+    display: inline-block;
+}
+
+.hero-title span:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--color-accent);
+    opacity: 0.6;
+}
+
+.hero-mantra {
+    color: var(--color-accent);
+    font-weight: 600;
+}

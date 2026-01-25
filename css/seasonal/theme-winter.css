@@ -1,0 +1,9 @@
+:root.theme-winter {
+    --color-bg: #08101A;
+    --color-surface: #101828;
+    --color-accent: #6ECEDA;        /* Icy cyan */
+    --color-accent-glow: #A2F0FF;
+    --color-text: #E6F0F7;
+    --color-muted: #A0B3C7;
+    --color-blue-glow: #4A90E2;
+}

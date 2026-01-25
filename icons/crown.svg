@@ -1,0 +1,38 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer HUD ring with futuristic ticks -->
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#C49808" stroke-width="1.2" stroke-dasharray="2,2" opacity="0.6"/>
+  
+  <!-- Inner ring with subtle glow -->
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#C49808" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Crown base - futuristic angular shape -->
+  <path d="M 12 40 Q 20 36 32 36 Q 44 36 52 40 L 52 48 L 32 52 L 12 48 Z" 
+        fill="#0D2275" stroke="#C49808" stroke-width="1.5" stroke-linejoin="round"/>
+  
+  <!-- Crown prongs - sharp, angular, mythical/futuristic -->
+  <path d="M 15 34 L 20 24 L 24 28 L 20 34" fill="#C49808" stroke="#FFD700" stroke-width="0.8" stroke-linejoin="round"/>
+  <path d="M 24 28 L 32 18 L 40 28" fill="#C49808" stroke="#FFD700" stroke-width="0.8" stroke-linejoin="round"/>
+  <path d="M 40 28 L 44 24 L 49 34" fill="#C49808" stroke="#FFD700" stroke-width="0.8" stroke-linejoin="round"/>
+  
+  <!-- Central gem - mystical core with HUD glow -->
+  <circle cx="32" cy="32" r="6" fill="url(#gemGradient)" stroke="#FFD700" stroke-width="1"/>
+  <circle cx="32" cy="32" r="8" fill="none" stroke="#FFD700" stroke-width="0.5" opacity="0.4"/>
+  
+  <!-- Gem gradient -->
+  <defs>
+    <radialGradient id="gemGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="50%" stop-color="#4872E8"/>
+      <stop offset="100%" stop-color="#0D2275"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Micro-HUD details - futuristic ticks and runes -->
+  <circle cx="10" cy="10" r="1.2" fill="#C49808" opacity="0.7"/>
+  <circle cx="54" cy="10" r="1.2" fill="#C49808" opacity="0.7"/>
+  <circle cx="10" cy="54" r="1.2" fill="#C49808" opacity="0.7"/>
+  <circle cx="54" cy="54" r="1.2" fill="#C49808" opacity="0.7"/>
+</svg>
+
+</svg>

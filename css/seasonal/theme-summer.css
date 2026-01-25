@@ -1,0 +1,10 @@
+:root.theme-summer {
+    --color-bg: #0A1422;
+    --color-surface: #122038;
+    --color-accent: #FF9500;        /* Warm orange */
+    --color-accent-glow: #FFC74D;
+    --color-text: #F8F4E9;
+    --color-muted: #C8B58A;
+    --color-blue-glow: #4A90E2;
+}
+/* Additional summer-specific styles can be added here */

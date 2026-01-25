@@ -1,0 +1,125 @@
+/* Reset & Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+    line-height: 1.6; 
+    color: var(--color-text);
+    background: var(--color-bg);
+    overflow-x: hidden;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+/* Typography */
+h1, h2, h3 { font-weight: 700; line-height: 1.2; }
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+.section { padding: 6rem 0; }
+
+/* Buttons */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+}
+.cta-button.primary { 
+    background: var(--color-accent); 
+    color: var(--color-bg);
+}
+.cta-button.primary:hover { 
+    background: var(--color-accent-glow); 
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(196, 152, 8, 0.4);
+}
+.cta-button.secondary { 
+    background: transparent; 
+    color: var(--color-accent); 
+    border-color: var(--color-accent);
+}
+.cta-button.large { padding: 1.25rem 2.5rem; font-size: 1.125rem; }
+.cta-button.huge { padding: 1.5rem 3rem; font-size: 1.25rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container { padding: 0 1.5rem; }
+    .section { padding: 4rem 0; }
+}
+
+/* Header */
+.header .nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    opacity: 0.8;
+    position: relative;
+    padding: 0.75rem 0;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.header .nav a:hover {
+    opacity: 1;
+    color: var(--color-accent);
+    background: rgba(196, 152, 8, 0.1);
+    box-shadow: 0 0 12px rgba(196, 152, 8, 0.3);
+}
+
+.header .nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-accent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.header .nav a:hover::before {
+    opacity: 0.6;
+}
+/* Base background + glass */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg);
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at top right, rgba(72, 114, 232, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at bottom left, rgba(72, 114, 232, 0.15) 0%, transparent 50%);
+}
+
+/* Glass cards / sections */
+.glass {
+    background: rgba(17, 22, 56, 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(196, 152, 8, 0.15);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+/* Subtle inner glow on surfaces */
+.glow {
+    box-shadow: 0 0 20px rgba(196, 152, 8, 0.15);
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+        linear-gradient(rgba(72, 114, 232, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(72, 114, 232, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -2;
+    pointer-events: none;
+}

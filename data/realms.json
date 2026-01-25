@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Royal Gaming",
+    "status": "Active",
+    "description": "Where it all began. Risky zones, coordinated runs, and support-driven plays led by Odin and other veterans.",
+    "features": ["Cooperative PvP/PvE", "Competitive Gameplay", "Smart rotations & risk management"],
+    "discordLink": "https://discord.gg/yzzYVGKVwA"
+  },
+  {
+    "name": "Next Realm",
+    "status": "In Founding",
+    "description": "We're actively scouting the next world that fits our code: high teamwork ceiling, great stories, strong ladder.",
+    "features": ["Community-driven choice", "Chill + competitive", "Long-term potential"],
+    "discordLink": "https://discord.gg/yzzYVGKVwA"
+  }
+]
