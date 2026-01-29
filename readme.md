@@ -3,7 +3,7 @@
 Futuristic mythical esports lodge for long-term squads. Teamwork. Positive mental. Zero drama.
 
 ## Live Site
-[royal-gaming-site.yourusername.com](https://royal-esports-gaming.github.io/Royal-Gaming/)
+[RoyalGaming](https://royal-esports-gaming.github.io/Royal-Gaming/)
 
 ## Features
 - Responsive, fast, mobile‑first
@@ -17,4 +17,5 @@ Futuristic mythical esports lodge for long-term squads. Teamwork. Positive menta
 ```bash
 # Just open index.html or use live server
 npx live-server
+
 
